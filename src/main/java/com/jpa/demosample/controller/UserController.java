@@ -13,10 +13,10 @@ public class UserController {
      @Autowired
      private UserJpaRepository userJpaRepository;
 
-    /* @GetMapping(value = "/{name}")
-          public Users findByName(@PathVariable final String name) {
-          return userJpaRepository.findByName(name);
-     } */
+     @GetMapping(value = "/message/{message}")
+          public String getMessage(@PathVariable final String message) {
+          return "Hello "+ message;
+     }
 
      @GetMapping(value = "/{salary}")
      public Users findbysalary(@PathVariable final Integer salary) {
